@@ -26,10 +26,11 @@ graph TD
     C --> C1[analyse-repository.md]
     C --> C2[commit-changes.md]
     C --> C3[create-migration-plan.md]
-    C --> C4[open-pull-request.md]
-    C --> C5[questions.md]
-    C --> C6[readme-only-update.md]
-    C --> C7[update-documentation.md]
+    C --> C4[init-update-agents.md]
+    C --> C5[open-pull-request.md]
+    C --> C6[questions.md]
+    C --> C7[readme-only-update.md]
+    C --> C8[update-documentation.md]
 ```
 
 ### Directory Contents
@@ -50,6 +51,7 @@ Markdown templates for common AI assistant workflows:
 - **[`analyse-repository.md`](commands/analyse-repository.md)** - Comprehensive codebase analysis framework
 - **[`commit-changes.md`](commands/commit-changes.md)** - Git commit workflow with semantic messages
 - **[`create-migration-plan.md`](commands/create-migration-plan.md)** - Migration planning template
+- **[`init-update-agents.md`](commands/init-update-agents.md)** - Debug mode rules for non-obvious issues
 - **[`open-pull-request.md`](commands/open-pull-request.md)** - Pull request creation workflow
 - **[`questions.md`](commands/questions.md)** - Question framework for clarification
 - **[`readme-only-update.md`](commands/readme-only-update.md)** - Documentation update workflow
