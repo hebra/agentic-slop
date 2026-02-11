@@ -5,21 +5,21 @@ This file provides guidance to agents when working with code in this repository.
 IMPORTANT: Only create and update this main AGENTS.md file. Do not create or update any vendor- or mode-specific AGENTS.md files. Keep mode-specific instructions as part of this file.
 
 ## Project Type
-This is a **rules and commands repository** for agentic coding assistants (Cline/Claude), not a traditional codebase. It contains XML-formatted rules and markdown command templates.
+This is a **rules and commands repository** for agentic coding assistants, not a traditional codebase. It contains XML-formatted rules and markdown command templates.
 
 ## Non-Obvious Conventions
 
 ### Memory Management
-- Use `.memory-bank/` directory (NOT `.cline_docs/`) for persistent project context
+- Use `.memory-bank/` directory (NOT `./agent_docs/`) for persistent project context
 - Memory Bank has specific file hierarchy: `projectbrief.md` → `productContext.md`/`systemPatterns.md`/`techContext.md` → `activeContext.md` → `progress.md`
-- Use `./cline_docs/` folder ONLY for task handoff documentation between sessions
+- Use `./agent_docs/` folder ONLY for task handoff documentation between sessions
 - Must read ALL memory bank files at start of EVERY task
 
 ### Context Window Management
 - Monitor context window usage in environment details
 - **CRITICAL**: Initiate task handoff at 70% usage (e.g., 140K/200K tokens)
 - Use `ask_followup_question` then `new_task` tool for handoffs
-- Clear `./cline_docs/` folder when writing new handover (old docs cause confusion)
+- Clear `./agent_docs/` folder when writing new handover (old docs cause confusion)
 
 ### Git Operations
 - **ALWAYS** use `--no-pager` flag with git commands (`git log --no-pager`, `git diff --no-pager`)
@@ -60,7 +60,7 @@ This is a **rules and commands repository** for agentic coding assistants (Cline
 - User instructions override all rules (ultimate precedence)
 
 ### Memory Management Architecture
-- Two-tier memory system: `.memory-bank/` (persistent) + `./cline_docs/` (ephemeral)
+- Two-tier memory system: `.memory-bank/` (persistent) + `./agent_docs/` (ephemeral)
 - Memory Bank has directed acyclic graph structure (projectbrief at root)
 - Task handoffs use linear sequence (old task ends, new begins)
 - Context window monitoring prevents memory overflow (70% threshold)
@@ -113,7 +113,7 @@ This is a **rules and commands repository** for agentic coding assistants (Cline
 
 ### Counterintuitive Patterns
 - "dissuing" in repository names actually means "issuing" (typo/abbreviation)
-- `.cline_docs/` folder is for task handoffs, NOT permanent documentation
+- `./agent_docs/` folder is for task handoffs, NOT permanent documentation
 - Context window monitoring at 70% is critical - not a suggestion
 - British English requirement is mandatory, not a preference
 
@@ -156,7 +156,7 @@ This is a **rules and commands repository** for agentic coding assistants (Cline
 - Self-explanatory content preferred; avoid obvious information
 
 ### Task Handoff Documentation
-- Create handoff docs in `./cline_docs/` (project root, not `.roo/`)
+- Create handoff docs in `./agent_docs/` (project root, not `.roo/`)
 - Clear old handoff docs before writing new ones (prevents confusion)
 - Include: completed work, current state, next steps, reference info
 - Must be concise - focus on non-obvious context only
@@ -192,7 +192,7 @@ This is a **rules and commands repository** for agentic coding assistants (Cline
 - Git operations that modify state (commit, push) require user confirmation
 
 ### Documentation Inconsistencies
-- `./cline_docs/` is for temporary task handoffs (cleared between major tasks)
+- `./agent_docs/` is for temporary task handoffs (cleared between major tasks)
 - `.memory-bank/` is for persistent project context (never cleared)
 - Confusion between these causes context loss across sessions
 

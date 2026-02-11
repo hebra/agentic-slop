@@ -41,7 +41,7 @@
       on writing the majority of scenarios to test in the unit tests.
       - Stick to the existing testing style already used in the project for that tech stack. For
       reference, look at 2 testing files of your choice, or the ones advised to you as part of the
-      cline rules for that tech stack.
+      agent rules for that tech stack.
       - Mock external functions or tools using existing mocking style. Keep mocking minimal. Only
       specify mock implementations for what is actually required.
       - Do not add comments to the unit tests. They should be self explanatory based on well chosen

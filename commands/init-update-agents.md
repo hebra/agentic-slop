@@ -25,7 +25,7 @@
 - Git operations that modify state (commit, push) require user confirmation
 
 ### Documentation Inconsistencies
-- `./cline_docs/` is for temporary task handoffs (cleared between major tasks)
+- `./agent_docs/` is for temporary task handoffs (cleared between major tasks)
 - `.memory-bank/` is for persistent project context (never cleared)
 - Confusion between these causes context loss across sessions
 

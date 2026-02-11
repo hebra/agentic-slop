@@ -1,6 +1,6 @@
 # agentic-slop
 
-Collection of rules, prompts, skills and best practices for agentic coding assistants (Cline/Claude).
+Collection of rules, prompts, skills and best practices for agentic coding assistants.
 
 ## Overview
 
@@ -84,7 +84,7 @@ graph TD
 ```
 
 - **`.memory-bank/`** - Persistent project context (never cleared)
-- **`./cline_docs/`** - Ephemeral task handoff documentation (cleared between major tasks)
+- **`./agent_docs/`** - Ephemeral task handoff documentation (cleared between major tasks)
 
 ### Context Window Management
 
@@ -143,14 +143,14 @@ All commits must follow Conventional Commits specification:
 ### For Developers
 
 1. Clone this repository
-2. Configure your AI coding assistant (Cline/Claude) to load these rules
+2. Configure your AI coding assistant to load these rules
 3. Reference [`AGENTS.md`](AGENTS.md) for quick guidance
 4. Invoke commands as needed for specific workflows
 5. Customize rules for your project-specific needs
 
 ## Requirements
 
-- AI coding assistant (Cline, Claude, or compatible)
+- AI coding assistant with tool-use capabilities
 - Git for version control
 - Text editor for viewing/editing rules
 
@@ -180,5 +180,4 @@ See [`LICENSE`](LICENSE) file for details.
 ## Related Resources
 
 - [Conventional Commits](https://www.conventionalcommits.org/)
-- [Cline Documentation](https://github.com/cline/cline)
 - [Semantic Versioning](https://semver.org/)

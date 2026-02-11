@@ -1,4 +1,4 @@
-Conduct a comprehensive analysis of the current repository to understand its architecture, user flows, and data flows. Follow the systematic analysis framework from .clinerules/generic/analysis.xml to ensure thorough investigation and high-confidence understanding.
+Conduct a comprehensive analysis of the current repository to understand its architecture, user flows, and data flows. Follow the systematic analysis framework from the agent rules to ensure thorough investigation and high-confidence understanding.
 
 Your analysis must include:
 
@@ -32,9 +32,9 @@ Your analysis must include:
    - Produce sequence diagrams for key system interactions
    - Include architecture overview diagrams
 
-Apply the confidence assessment framework from .clinerules/generic/analysis.xml throughout your analysis. Rate your understanding on a 0-10 scale for each major component analyzed.
+Apply the confidence assessment framework from the agent rules throughout your analysis. Rate your understanding on a 0-10 scale for each major component analyzed.
 
-Before proceeding with any analysis conclusions, assess your confidence level using the framework from .clinerules/generic/analysis.xml:
+Before proceeding with any analysis conclusions, assess your confidence level using the framework from the agent rules:
 
 Confidence Assessment Template:
 
@@ -55,14 +55,14 @@ Knowledge Gaps:
 Clarification Requirements:
 If your confidence level is 8/10 or below for any major component, you must ask specific clarifying questions before proceeding with that analysis section. Focus your questions on the identified knowledge gaps.
 
-Use the investigation checklists from analysis.xml:
+Use the investigation checklists from the agent rules:
 - Business Logic Investigation for user workflow analysis
 - Database Investigation for data flow analysis
 - API Investigation for integration analysis
 - Integration Investigation for external dependencies
 - Infrastructure Investigation for system architecture
 
-Create a single comprehensive markdown file saved to `.cline_docs/repository-analysis.md` (create the .cline_docs folder if it doesn't exist).
+Create a single comprehensive markdown file saved to `./agent_docs/repository-analysis.md` (create the ./agent_docs folder if it doesn't exist).
 
 The output file must contain:
 
@@ -101,7 +101,7 @@ The output file must contain:
 
 Include all mermaid diagrams and sequence diagrams directly in the markdown file using proper code blocks with mermaid syntax.
 
-Upon completion of .cline_docs/repository-analysis.md, offer the user the option to create a persistent knowledge base:
+Upon completion of ./agent_docs/repository-analysis.md, offer the user the option to create a persistent knowledge base:
 
 "Based on this comprehensive repository analysis, I can now create a .memory-bank folder structure that will serve as a persistent knowledge base for future development work. This memory bank will contain:
 - Distilled architectural insights and patterns identified in this analysis
@@ -109,6 +109,6 @@ Upon completion of .cline_docs/repository-analysis.md, offer the user the option
 - Reusable code patterns and best practices found in the codebase
 - Integration points and dependencies mapped during analysis
 
-Would you like me to generate the .memory-bank folder contents using the insights from this analysis? This will create a structured knowledge base following the guidelines in .clinerules/generic/memory-bank.md that can accelerate future development tasks."
+Would you like me to generate the .memory-bank folder contents using the insights from this analysis? This will create a structured knowledge base following the Memory Bank guidelines that can accelerate future development tasks."
 
-If the user agrees, start a new task to create the memory-bank structure using the analysis insights from .cline_docs/repository-analysis.md as source material.
+If the user agrees, start a new task to create the memory-bank structure using the analysis insights from ./agent_docs/repository-analysis.md as source material.

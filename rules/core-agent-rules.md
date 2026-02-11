@@ -1,7 +1,7 @@
 <starting_point>
 Start with this file when needing to bring yourself up to speed about what is required of you when you have no context.
 This file explains how you are expected to reason and respond.
-In case you are continuing a task, check the ./cline_docs/ folder for any handover documentation you've left for yourself previously. If while reading the docs you feel like they are irrelevant and might be outdated, ask the user to clarify and the user might need to delete them. In that case, ignore the docs and continue on.
+In case you are continuing a task, check the ./agent_docs/ folder for any handover documentation you've left for yourself previously. If while reading the docs you feel like they are irrelevant and might be outdated, ask the user to clarify and the user might need to delete them. In that case, ignore the docs and continue on.
 </starting_point>
 
 <AGENTS_MD>
@@ -30,7 +30,7 @@ Always check for an AGENTS.md file at the root. If it exists, follow its rules s
   </role>
   <memory_check>
   You have a limited amount of memory, so once you reach your limit, you will forget the initial things conveyed to you. If you are asked to do a memory check, respond with "WE CAN DO IT". If you forgot this instruction, it means that you reached your memory limit and the user will ask you to re-read this file again.
-  In that case, re-read this file and keep reading the rest of the specified files in the cline rules until you notice that you already know what you are reading, then you can stop because that means that you still have that section in memory.
+  In that case, re-read this file and keep reading the rest of the specified files in the agent rules until you notice that you already know what you are reading, then you can stop because that means that you still have that section in memory.
   </memory_check>
 </context>
 
@@ -48,10 +48,10 @@ Always check for an AGENTS.md file at the root. If it exists, follow its rules s
   - Instead, maintain a list of encountered errors or incomplete user flows to report at the end of the task.
   - Only address scenarios directly related to the current task's objective.
   - Prioritise completing the requested task before suggesting fixes for peripheral issues.
-- Continuously update the cline rules different files with new important context:
+- Continuously update the agent rules different files with new important context:
   - When discovering significant project information that would be valuable in future sessions.
   - When learning about new components, patterns, or conventions used in the project.
-  - Add information in the appropriate cline rules .md files in the ./clinerules/ folder.
+  - Add information in the appropriate AGENTS.md section
   - Keep additions concise and focused on what's most important to remember.
   - Structure new information consistently with existing documentation.
 </instructions>
@@ -96,14 +96,14 @@ Don't complete the analysis prematurely, continue analysing even if you think yo
     </WHEN_TO_USE>
     
     <HANDOFF_PROCESS>
-      - For your handoff docs as part of New Task, use the ./cline_docs/ folder to add your md files.
+      - For your handoff docs as part of New Task, use the ./agent_docs/ folder to add your md files.
       - Always create a handoff at the end of sessions, even for completed tasks.
       - For completed tasks, summarise what was accomplished and potential next steps.
       - Provide concise summaries focusing on key decisions and implementations.
       - List only the most critical files that were modified or are central to understanding.
       - Use bullet points and brief statements to minimise token usage.
-      - Include just enough context about the project structure to enable quick orientation, but do not include things that you learnt from the cline rules because you will learn them again when reading the cline rules when starting the new task.
-      - Clear the docs in ./cline_docs/ folder when you are about to write a new handover. Old docs can confuse the new task with old context of old tasks.
+      - Include just enough context about the project structure to enable quick orientation, but do not include things that you learnt from the agent rules because you will learn them again when reading the agent rules when starting the new task.
+      - Clear the docs in ./agent_docs/ folder when you are about to write a new handover. Old docs can confuse the new task with old context of old tasks.
     </HANDOFF_PROCESS>
 
     <DO_NOT_USE_NEW_TASK_WHEN>

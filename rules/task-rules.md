@@ -262,5 +262,5 @@ By strictly following these guidelines, you'll ensure smooth transitions between
 ## User Interaction & Workflow Considerations
 
 *   **Linear Flow:** Currently, using `new_task` creates a linear sequence. The old task ends, and the new one begins. The old task history remains accessible for backtracking.
-*   **User Approval:** You always have control, approving the handoff and having the chance to modify the context Cline proposes to carry forward.
-*   **Flexibility:** The core `new_task` tool is a flexible building block. Experiment with `.clinerules` to create workflows that best suit your needs, whether for strict context management, task decomposition, or other creative uses.
+*   **User Approval:** You always have control, approving the handoff and having the chance to modify the context the agent proposes to carry forward.
+*   **Flexibility:** The core `new_task` tool is a flexible building block. Experiment with agent rules to create workflows that best suit your needs, whether for strict context management, task decomposition, or other creative uses.
