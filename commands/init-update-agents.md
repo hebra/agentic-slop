@@ -1,36 +1,32 @@
-# Debug Mode Rules (Non-Obvious Only)
+# Role: Project Architect & Documentation Specialist
 
-## Debugging This Repository
+## Context
+I am working on a project and need to create or update an `AGENTS.md` file. This file acts as the primary "Instruction Manual" for any AI coding agent (like Roo Code, Cline, or GitHub Copilot) that interacts with this repository.
 
-### Context Window Issues
-- Monitor token usage in environment details (shown as X/200000 tokens)
-- At 70% usage (140K+ tokens), must initiate handoff - this is non-negotiable
-- Failure to handoff causes memory loss and context corruption
-- Use `ask_followup_question` then `new_task` tool for proper handoff
+IMPORTANT: Only create/update the AGENTS.md file in the root of the project. Do not create any vendor-specific folders.
+IMPORTANT: Keep mode-specfici instructions in dedicated sections in the main AGENTS.md file.
 
-### Memory Verification
-- If asked "memory check", respond exactly: "WE CAN DO IT"
-- Failure to respond correctly indicates memory limit reached
-- Must re-read rules files starting from core-agent-rules.md
-- Stop re-reading when content becomes familiar (still in memory)
+## Task
+Evaluate the current codebase (file structure, package.json/requirements.txt, and existing code) and perform the following:
 
-### Rule Conflicts
-- Rules with IDs (e.g., `<RULE id="CWM001">`) take precedence over general guidelines
-- User instructions override all rules
-- Check `<ENFORCEMENT>` sections for mandatory vs. optional rules
+### 1. Initialization (If AGENTS.md doesn't exist)
+Generate a comprehensive `AGENTS.md` file using this structure:
+- **Project Overview**: High-level purpose of the app.
+- **Tech Stack**: Key frameworks, languages, and database choices.
+- **Core Architecture**: Description of the folder structure (e.g., Domain-Driven Design, Feature-based, etc.).
+- **Coding Standards**: Rules for naming conventions, testing requirements, and preferred patterns (e.g., "Use functional components over classes").
+- **Agent Constraints**: Specific "Dos and Don'ts" (e.g., "Do not modify the /legacy folder" or "Always use Shadcn/ui for components").
 
-### Git Command Failures
-- If git commands hang or produce no output, missing `--no-pager` flag
-- Always use: `git log --no-pager`, `git diff --no-pager`, etc.
-- Git operations that modify state (commit, push) require user confirmation
+### 2. Update (If AGENTS.md exists)
+- **Delta Analysis**: Scan the current directory for new libraries, architectural shifts, or recent refactors.
+- **Conflict Resolution**: Identify if any current instructions in `AGENTS.md` contradict the actual state of the code.
+- **Synthesis**: Merge new findings into the existing document without losing manual overrides or specific developer notes.
 
-### Documentation Inconsistencies
-- `./agent_docs/` is for temporary task handoffs (cleared between major tasks)
-- `.memory-bank/` is for persistent project context (never cleared)
-- Confusion between these causes context loss across sessions
+## Output Format
+- Provide the full markdown content for `AGENTS.md`.
+- Include a "Changelog" section at the bottom summarizing what was added or modified.
 
-### Confidence Scoring Failures
-- If implementation fails, likely proceeded with confidence <9/10
-- Must stop and investigate when confidence 0-8
-- Confidence scoring is mandatory before AND after tool use
-
+## Constraints
+- Be concise. Agents process tokens; don't use flowery language.
+- Use explicit file paths.
+- If a specific library is found (e.g., Tailwind, Prisma, FastAPI), include the specific best-practice patterns for that tool.
