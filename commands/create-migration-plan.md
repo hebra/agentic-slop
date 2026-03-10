@@ -15,4 +15,3 @@ Each plan must contain:
 - Use dashes and a single space for markdown lists.
 - Add a step to commit to Git after each task is complete
 - **IMPORTANT** Add an instruction after each task has been completed and a Git commit has been created for the user to review the changes
-- The organization for the Go modules is github.com/cuscal
